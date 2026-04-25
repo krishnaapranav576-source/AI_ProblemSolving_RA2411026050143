@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Navigation System</title>
+</head>
+<body>
+
+    <h1>Smart Navigation System (BFS & DFS)</h1>
+
+    <form method="POST">
+
+        <label>Start Node:</label><br>
+        <input type="text" name="start" required><br><br>
+
+        <label>Goal Node:</label><br>
+        <input type="text" name="goal" required><br><br>
+
+        <button type="submit">Find Path</button>
+
+    </form>
+
+    {% if bfs_path %}
+        <h2>BFS Result</h2>
+        <p><strong>Path:</strong> {{ bfs_path }}</p>
+        <p><strong>Visited Nodes:</strong> {{ bfs_visited }}</p>
+
+        <h2>DFS Result</h2>
+        <p><strong>Path:</strong> {{ dfs_path }}</p>
+        <p><strong>Visited Nodes:</strong> {{ dfs_visited }}</p>
+    {% endif %}
+
+</body>
+</html>
